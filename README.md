@@ -35,6 +35,8 @@ console.log(alden.getAllSeries())
 This function returns an array of all the anime which contains "keyword" in their title.
 
 ```javascript
+console.log(JSON.stringify(alden.getAnimebyTitle('keyword'), null, 2))
+//example:
 console.log(JSON.stringify(alden.getAnimebyTitle('Attack'), null, 2))
 ``` 
 
@@ -44,6 +46,8 @@ This function returns an array of all the comments of a specific Anime.
 
 
 ```javascript
+console.log(JSON.stringify(alden.getCommentsByTitle("title"), null, 2))
+//example:
 console.log(alden.getCommentsByTitle("My Hero Academia"))
 ``` 
 
@@ -61,6 +65,8 @@ This function adds a new Anime into array.
 
 ```javascript
 console.log(alden.addAnime(4, "Name", "Genres", episodes, "Description", year, "Studio"))
+//example:
+console.log(alden.addAnime(4, "Pluto", "Mystery", 8, "AI detective solves conspiracy", 2023, "Studio M2"))
 ``` 
 
 ## Add Review 
@@ -71,6 +77,8 @@ This will affect the average ratings of anime.
 
 ```javascript
 console.log(alden.addReview(id, rating, "Comment"))
+//example:
+console.log(alden.addReview(1, 7, "Very Good Anime"))
 ``` 
 
 ## Edit Anime by ID
@@ -79,6 +87,8 @@ This function edits the details of a certain anime by ID.
 
 ```javascript
 console.log(alden.editAnimebyID(id, "title", "genre", episodes, "description", year, "studio"))
+//example:
+console.log(alden.editAnimebyID(1, "AOT", "Action", 100, "We need to survive against the titans behind the wall", 2013, "Kyoto Animation"))
 ``` 
 
 ## Delete Anime by ID
@@ -86,5 +96,7 @@ console.log(alden.editAnimebyID(id, "title", "genre", episodes, "description", y
 This function deletes the details of an anime by ID.
 
 ```javascript
+console.log(JSON.stringify(alden.deleteAnimebyID(id), null, 2))
+//example:
 console.log(JSON.stringify(alden.deleteAnimebyID(3), null, 2))
 ``` 

@@ -1,6 +1,6 @@
 # Alden's Anime  Module
 
-This Node.js module simulates interactions with a anime website, allowing users to search for anime, post reviews and ratings, get a random anime, and more.
+This Node.js module simulates interactions with a anime website, allowing users to search for anime, post reviews and ratings, get a random anime and more.
 
 ## Installation
 

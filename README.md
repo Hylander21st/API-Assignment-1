@@ -49,7 +49,7 @@ This function returns an array of all the comments of the specific Anime.
 
 
 ```javascript
-console.log(alden.getCommentsByTitle("title"), null, 2)
+console.log(alden.getCommentsByTitle("title"))
 //example:
 console.log(alden.getCommentsByTitle("My Hero Academia"))
 ``` 

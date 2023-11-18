@@ -80,6 +80,7 @@ This function adds a review to a new anime with the given variables.
 A new review will include a rating and a comment.
 This will affect the average ratings of the anime.
 
+### **_Note : You can only enter a rating between 1 - 10_**
 ```javascript
 console.log(alden.addReview(id, rating, "Comment"))
 //example:

@@ -138,6 +138,7 @@ function getRandomAnime() {
 function addAnime(title, genre, episodes, description, releaseYear, studio) {
     // find the highest id among all anime in the AnimeStates array
     // maxId is the accumulator, initially set to 0, and anime represents each anime in the array
+    // math.max compares which id is more
     const highestId = AnimeStates.reduce((maxId, anime) => Math.max(maxId, anime.id), 0);
 
     AnimeStates.push({

@@ -90,17 +90,17 @@ function getAllSeries() {
 
 //function to get an anime by its title
 function getAnimebyTitle(title) {
-    // inlcudes so that even if not exact, will still pop up
-    //s is curreent instance
-    //runs through each instance to match s.title== current title
-    let animename = AnimeStates.filter(s => s.title.includes(title))
-    //check if animename exists
-    if (animename) {
-        return animename
-    } else {
-        return "There is no anime by that Name"
-    }
+    // includes so that even if not exact, will still pop up
+    // s is the current instance
+    // runs through each instance to match s.title == current title
+    let animename = AnimeStates.filter(s => s.title.includes(title));
 
+    // check if animename is not an empty array
+    if (animename.length > 0) {
+        return animename;
+    } else {
+        return "There is no anime by that Name";
+    }
 }
 
 //function to get the comments on an anime

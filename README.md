@@ -68,9 +68,9 @@ This function takes in multiple variables which are id, title, genre, episodes, 
 This function adds a new Anime into array with the given varibles.
 
 ```javascript
-console.log(alden.addAnime("Name", "Genres", episodes, "Description", year, "Studio"))
+alden.addAnime("Name", "Genres", episodes, "Description", year, "Studio")
 //example:
-console.log(alden.addAnime("Pluto", "Mystery", 8, "AI detective solves conspiracy", 2023, "Studio M2"))
+alden.addAnime("Pluto", "Mystery", 8, "AI detective solves conspiracy", 2023, "Studio M2")
 ``` 
 
 ## Add Review 
@@ -93,9 +93,9 @@ This function takes in a id variable.
 This function edits the details of a certain anime by the given id. 
 
 ```javascript
-console.log(alden.editAnimebyID(id, "title", "genre", episodes, "description", year, "studio"))
+alden.editAnimebyID(id, "title", "genre", episodes, "description", year, "studio")
 //example:
-console.log(alden.editAnimebyID(1, "AOT", "Action", 100, "We need to survive against the titans behind the wall", 2013, "Kyoto Animation"))
+alden.editAnimebyID(1, "AOT", "Action", 100, "We need to survive against the titans behind the wall", 2013, "Kyoto Animation")
 ``` 
 
 ## Delete Anime by ID
@@ -104,7 +104,7 @@ This function takes in a id variable.
 This function deletes the details of an anime by the given id.
 
 ```javascript
-console.log(JSON.stringify(alden.deleteAnimebyID(id), null, 2))
+JSON.stringify(alden.deleteAnimebyID(id), null, 2)
 //example:
-console.log(JSON.stringify(alden.deleteAnimebyID(3), null, 2))
+JSON.stringify(alden.deleteAnimebyID(3), null, 2)
 ``` 

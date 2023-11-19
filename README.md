@@ -68,9 +68,9 @@ This function takes in multiple variables which are id, title, genre, episodes, 
 This function adds a new Anime into array with the given varibles.
 
 ```javascript
-console.log(alden.addAnime(4, "Name", "Genres", episodes, "Description", year, "Studio"))
+console.log(alden.addAnime("Name", "Genres", episodes, "Description", year, "Studio"))
 //example:
-console.log(alden.addAnime(4, "Pluto", "Mystery", 8, "AI detective solves conspiracy", 2023, "Studio M2"))
+console.log(alden.addAnime("Pluto", "Mystery", 8, "AI detective solves conspiracy", 2023, "Studio M2"))
 ``` 
 
 ## Add Review 

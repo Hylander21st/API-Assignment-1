@@ -111,7 +111,7 @@ function getCommentsByTitle(title) {
     if (!anime) {
         // if not found, return error
         return "There is no anime by that name";
-    } else {    // get comments from the reviews
+    } else {  // creates and returns a new array with just the comments
         const comments = anime.reviews.map(review => review.comments);
 
         // filter out empty comments
@@ -135,9 +135,13 @@ function getRandomAnime() {
 
 //POSTER
 //function to add an anime into the array
-function addAnime(id, title, genre, episodes, description, releaseYear, studio) {
+function addAnime(title, genre, episodes, description, releaseYear, studio) {
+    // find the highest id among all anime in the AnimeStates array
+    // maxId is the accumulator, initially set to 0, and anime represents each anime in the array
+    const highestId = AnimeStates.reduce((maxId, anime) => Math.max(maxId, anime.id), 0);
+
     AnimeStates.push({
-        id: id,
+        id: highestId + 1,
         title: title,
         genre: genre,
         episodes: episodes,
@@ -196,8 +200,14 @@ function editAnimebyID(id, title, genre, episodes, description, releaseYear, stu
 //DELETE
 //function to delete an anime using id
 function deleteAnimebyID(id) {
-    AnimeStates.splice(id - 1, 1)
-    return AnimeStates
+    //find the anime you want to delete using id
+    let anime = AnimeStates.find(a => a.id == id)
+    if (anime) {
+        //removes the element from the array
+        AnimeStates.splice(id - 1, 1)
+        return AnimeStates
+    }
+    else { return "There is no anime with that id" }
 }
 
 module.exports = {

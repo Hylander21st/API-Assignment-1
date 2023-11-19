@@ -153,6 +153,7 @@ function addAnime(title, genre, episodes, description, releaseYear, studio) {
         averageRating: 0.0, //  initialize the averageRating to 0.0
         studio: studio
     });
+    return "Anime added sucessfully"
 }
 
 //function to add a review which will add to the rating and comments
@@ -196,7 +197,7 @@ function editAnimebyID(id, title, genre, episodes, description, releaseYear, stu
             anime.releaseYear = releaseYear,
             anime.studio = studio
 
-
+        return "Anime edited sucessfully"
     }
 }
 
@@ -209,7 +210,7 @@ function deleteAnimebyID(id) {
     if (anime) {
         //removes the element from the array
         AnimeStates.splice(id - 1, 1)
-        
+        return "Anime deleted sucessfully"
     }
     else { return "There is no anime with that id" }
 }

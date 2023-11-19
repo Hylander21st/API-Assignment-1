@@ -91,10 +91,11 @@ function getAllSeries() {
 //function to get an anime by its title
 function getAnimebyTitle(title) {
     // inlcudes so that even if not exact, will still pop up
+    //s is curreent instance
+    //runs through each instance to match s.title== current title
     let animename = AnimeStates.filter(s => s.title.includes(title))
+    //check if animename exists
     if (animename) {
-        //s is curreent instance
-        //runs through each instance to match s.title== current title
         return animename
     } else {
         return "There is no anime by that Name"
@@ -157,7 +158,7 @@ function addAnime(title, genre, episodes, description, releaseYear, studio) {
 //function to add a review which will add to the rating and comments
 function addReview(id, rating, comment) {
     let anime = AnimeStates.find(a => a.id == id)
-
+    //check if anime exists
     if (anime) {
         // rating has to be 1 to 10
         if (rating >= 1 && rating <= 10) {
@@ -185,6 +186,7 @@ function addReview(id, rating, comment) {
 function editAnimebyID(id, title, genre, episodes, description, releaseYear, studio) {
     //find the anime you want to edit through id
     let anime = AnimeStates.find(a => a.id == id)
+    //if anime exists
     if (anime) {
         //change the details with the new inputted ones
         anime.title = title,
@@ -203,6 +205,7 @@ function editAnimebyID(id, title, genre, episodes, description, releaseYear, stu
 function deleteAnimebyID(id) {
     //find the anime you want to delete using id
     let anime = AnimeStates.find(a => a.id == id)
+    //if anime exists
     if (anime) {
         //removes the element from the array
         AnimeStates.splice(id - 1, 1)

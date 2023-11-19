@@ -13,7 +13,7 @@ Please make sure to download and install node.js. After that, please make sure t
 Firstly, require the module in you project:
 
 ```javascript
-const alden = require('./Alden_Anime');
+const alden = require('./Alden_animelist');
 ```
 
 

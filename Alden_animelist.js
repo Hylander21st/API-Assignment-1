@@ -198,7 +198,7 @@ function editAnimebyID(id, title, genre, episodes, description, releaseYear, stu
             anime.studio = studio
 
         return "Anime edited sucessfully"
-    }else{
+    } else {
         return "There is no anime with that id"
     }
 }

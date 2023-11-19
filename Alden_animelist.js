@@ -209,7 +209,7 @@ function deleteAnimebyID(id) {
     if (anime) {
         //removes the element from the array
         AnimeStates.splice(id - 1, 1)
-        return AnimeStates
+        
     }
     else { return "There is no anime with that id" }
 }

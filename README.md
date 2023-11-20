@@ -64,7 +64,7 @@ console.log(alden.getRandomAnime())
 
 ## Add Anime 
 
-This function takes in multiple variables which are id, title, genre, episodes, description, releaseYear, studio.
+This function takes in multiple variables which are  title, genre, episodes, description, releaseYear, studio.
 This function adds a new Anime into array with the given varibles.
 
 ```javascript
